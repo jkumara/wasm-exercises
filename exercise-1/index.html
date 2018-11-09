@@ -1,0 +1,9 @@
+<!doctype html>
+
+<script>
+  (async () => {
+    const wasm = await WebAssembly.instantiateStreaming(fetch('add.wasm'));
+
+    console.log(wasm.instance.exports.add(13, 11));
+  })()
+</script>
