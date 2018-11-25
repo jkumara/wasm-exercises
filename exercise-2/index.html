@@ -1,3 +1,9 @@
 <!doctype>
 
-<script></script>
+<script>
+  (async () => {
+    const wasm = await WebAssembly.instantiateStreaming(fetch('multiply.wasm'));
+
+    console.log(wasm.instance.exports.multiply(13, 11));
+  })()
+</script>

@@ -1,3 +1,19 @@
 <!doctype>
 
-<script></script>
+
+<script>
+  (async () => {
+    const wasmOptions = {
+      imports: {
+        log: arg => alert(arg)
+      }
+    };
+
+    const wasm = await WebAssembly.instantiateStreaming(
+      fetch('addAndLog.wasm'),
+      wasmOptions
+    );
+
+    wasm.instance.exports.addAndLog(13, 11);
+  })();
+</script>
