@@ -1,0 +1,25 @@
+<!doctype html>
+
+<script>
+  (async () => {
+    const memory = new WebAssembly.Memory({initial: 1});
+
+    const logFromMemory = (offset, length) => {
+      const bytes = new Uint8Array(memory.buffer, offset, length);
+      const string = new TextDecoder('utf8').decode(bytes);
+      console.log(string)
+    };
+
+    const wasmOptions = {
+      imports: {log: logFromMemory},
+      js: {mem: memory}
+    };
+
+    const wasm = await WebAssembly.instantiateStreaming(
+      fetch('memory.wasm'),
+      wasmOptions
+    );
+
+    wasm.instance.exports.helloWorld();
+  })()
+</script>

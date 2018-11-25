@@ -1,0 +1,22 @@
+{
+  "name": "wasm-exercises",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "http-server ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkumara/wasm-exercises.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jkumara/wasm-exercises/issues"
+  },
+  "homepage": "https://github.com/jkumara/wasm-exercises#readme"
+}
