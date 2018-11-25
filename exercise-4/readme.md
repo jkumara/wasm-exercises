@@ -12,7 +12,6 @@ Write a wat-file that contains two functions:
   * Accepts two 32-bit integers as parameters
   * Adds the parameters together
   * Calls the imported function with the sum as parameter
-  * Returns the sum
 
 Compile the wat-file to "addAndLog.wasm".
 
