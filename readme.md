@@ -25,7 +25,7 @@ npm start -- -p <port number>
 
 A simple way is to compile the Wasm online, using [WasmExplorer](https://mbebenita.github.io/WasmExplorer/). Simply write your code in the "Wat" column and click "Assemble" and then "Download". This will download your code as a Wasm-file.
 
-Note that the code in "Firefox x86 Assembly" panel is not WebAssembly (it is the actual machine code generated from the WebAssmebly code by a JS-engine).
+Note that the code in "Firefox x86 Assembly" panel is not WebAssembly (it is the actual machine code generated from the WebAssembly code by a JS-engine).
 
 ### Compiling on the command line
 
